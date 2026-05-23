@@ -1,0 +1,28 @@
+ 
+===== Sat 05/23/2026 16:35:49.15 ===== 
+Scanning 106 companies via providers (35 skipped — no provider matched)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Portal Scan — 2026-05-23
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Companies scanned:     106
+Total jobs found:      9611
+Filtered by title:     9480 removed
+Filtered by location:  101 removed
+Duplicates:            30 skipped
+New offers added:      0
+
+Errors (10):
+  ✗ Ada: HTTP 404: {"status":404,"error":"Job not found"}
+  ✗ Tinybird: HTTP 404: Not Found
+  ✗ Travelperk: HTTP 404: Not Found
+  ✗ Factorial: HTTP 404: {"status":404,"error":"Job not found"}
+  ✗ Clarity AI: HTTP 404: {"ok":false,"error":"Document not found"}
+  ✗ Forto: HTTP 404: {"ok":false,"error":"Document not found"}
+  ✗ Runway: HTTP 404: {"status":404,"error":"Job not found"}
+  ✗ Vinted: HTTP 404: {"ok":false,"error":"Document not found"}
+  ✗ Sprinklr: HTTP 404: {"status":404,"error":"Job not found"}
+  ✗ Glean: HTTP 404: Not Found
+
+→ Run /career-ops pipeline to evaluate new offers.
+→ Share results and get help: https://discord.gg/8pRpHETxa4
