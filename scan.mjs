@@ -399,6 +399,21 @@ async function main() {
   const titleFilter = buildTitleFilter(config.title_filter);
   const locationFilter = buildLocationFilter(config.location_filter);
 
+  // Named location filters — keyed by name from `location_filters:` in portals.yml.
+  // Entries can override the global filter via `location_filter: <name>`.
+  const namedLocationFilters = new Map();
+  if (config.location_filters && typeof config.location_filters === 'object') {
+    for (const [name, def] of Object.entries(config.location_filters)) {
+      namedLocationFilters.set(name, buildLocationFilter(def));
+    }
+  }
+  const resolveLocationFilter = (entry) => {
+    if (entry.location_filter && namedLocationFilters.has(entry.location_filter)) {
+      return namedLocationFilters.get(entry.location_filter);
+    }
+    return locationFilter;
+  };
+
   // 3. Resolve a provider for each enabled company
   const targets = [];
   let skippedCount = 0;
@@ -438,6 +453,7 @@ async function main() {
     let provider = company._provider;
     const ctx = makeHttpCtx();
     let sourceName = provider.id === 'local-parser' ? 'local-parser' : `${provider.id}-api`;
+    const entryLocationFilter = resolveLocationFilter(company);
     try {
       let jobs;
       try {
@@ -464,7 +480,7 @@ async function main() {
           totalFilteredTitle++;
           continue;
         }
-        if (!locationFilter(job.location)) {
+        if (!entryLocationFilter(job.location)) {
           totalFilteredLocation++;
           continue;
         }
