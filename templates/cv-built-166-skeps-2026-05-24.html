@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 794px; margin: 0 auto; padding: 2px 0; }
+
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; min-width: 0; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 0; }
+  }
+  .avoid-break, .job, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="separator">|</span>
+      <span>Dehradun, India · Remote</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-text">Data Analyst with ~1.5 years hands-on experience in SQL, Python (Pandas, NumPy), and Power BI, specializing in reporting infrastructure, data modeling, and statistical analysis for business operations. Built KPI dashboards, trend analysis workflows, and regression-ready forecasting models that drove operational decisions in a logistics environment. Skilled at segmentation, portfolio analytics, and turning complex operational datasets into interactive dashboards and executive-ready insights.</div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-title">CORE COMPETENCIES</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">SQL &amp; Python (Pandas, NumPy)</span>
+      <span class="competency-tag">Statistical Analysis</span>
+      <span class="competency-tag">Reporting Infrastructure</span>
+      <span class="competency-tag">Data Modeling &amp; Segmentation</span>
+      <span class="competency-tag">Interactive Dashboards</span>
+      <span class="competency-tag">Trend Analysis &amp; Forecasting</span>
+      <span class="competency-tag">Portfolio Analytics</span>
+      <span class="competency-tag">Power BI / Metabase (familiar)</span>
+      <span class="competency-tag">ETL Validation &amp; Data Quality</span>
+      <span class="competency-tag">Cross-functional Reporting</span>
+      <span class="competency-tag">Process Improvement</span>
+      <span class="competency-tag">KPI Tracking</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">EXPERIENCE</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Logistics Integrators Pvt. Ltd.</div>
+        <div class="job-period">Mar 2025 – Mar 2026</div>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Owned weekly <strong>Power BI dashboards tracking 10+ business KPIs</strong> across freight operations — established the single source of truth for cross-team reporting; built interactive dashboards adopted by 3+ teams as their primary performance reference</li>
+        <li>Built <strong>statistical analysis and trend analysis workflows</strong> on operational and sales datasets; developed regression-ready KPI models and forecasting logic that surfaced performance trajectories and informed business planning</li>
+        <li>Designed <strong>conversion, funnel, and drop-off analysis</strong> on shipment journeys (start-to-delivery), enabling segmentation-level insights that informed operational interventions and process redesigns</li>
+        <li>Led <strong>root-cause analysis (RCA) on performance spikes</strong> — shipment delays, turnaround drops, cost overruns — partnering with 3–5 cross-functional teams to validate data and ship corrective actions</li>
+        <li>Drove <strong>data quality and data integrity workflows</strong>: ETL validation, reconciliation, cross-system audits — eliminating reporting discrepancies and ensuring clean data for downstream dashboards</li>
+        <li>Automated recurring <strong>Python (Pandas, NumPy) reporting pipelines</strong>, reducing manual effort and improving turnaround on weekly business reviews</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Vrun Minerals Pvt. Ltd.</div>
+        <div class="job-period">Feb 2024 – Jul 2024</div>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Cleaned and validated distributor and sales datasets using <strong>Excel and Python (Pandas)</strong>; built segmentation dashboards with deviation highlighting on inventory and sales trends</li>
+        <li>Performed <strong>inventory reconciliation and data accuracy checks</strong> across daily operations, reducing reporting errors and improving stock visibility</li>
+        <li>Conducted <strong>business trend analysis</strong> to generate actionable insights for supply-chain decisions; documented data workflows and measurement requirements for non-technical stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">EDUCATION</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">MBA / PGPM — Operations Management <span class="edu-org">· ICFAI Business School, Mumbai</span></div>
+        <div class="edu-year">2025 · CGPA 6.83</div>
+      </div>
+      <div class="edu-desc">Focus: data-driven decision making, process optimization, and performance analytics — directly applicable to portfolio-level reporting and business insights work.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Computer Applications (BCA) <span class="edu-org">· Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <div class="edu-year">2022 · 72.68%</div>
+      </div>
+      <div class="edu-desc">Foundation in programming (Java, Python), relational databases (SQL), and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="cert-item">
+      <div class="cert-title">dbt Fundamentals</div>
+      <div class="cert-org">dbt Labs</div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">SQL &amp; Python:</span> SQL (joins, window functions, CTEs, aggregations), Python (Pandas, NumPy), Statistical Analysis, Trend Analysis, Regression Modeling, Forecasting, Segmentation, Cohort Analysis, Funnel Analytics, Data Mining, Outlier Detection</div>
+      <div class="skill-item"><span class="skill-category">BI &amp; Visualization:</span> Power BI, Metabase / Tableau (familiar), MS Excel (Pivot Tables, Power Query, Modeling), Dashboard Development, Interactive Dashboards, Self-serve Analytics, Executive Reporting</div>
+      <div class="skill-item"><span class="skill-category">Analytics Engineering:</span> Data Modeling, dbt Core, ELT/ETL Pipelines, Data Quality, Data Integrity, ETL Validation, Process Automation, Reporting Infrastructure</div>
+      <div class="skill-item"><span class="skill-category">Business Analytics:</span> Portfolio Analytics, KPI Tracking, Metrics Ownership, Performance Monitoring, RCA / Root Cause Analysis, Cross-functional Reporting, Business Operations, Supply Chain Analytics</div>
+      <div class="skill-item"><span class="skill-category">Collaboration:</span> Stakeholder Management, Data Storytelling, Cross-functional Data Validation, Non-technical Communication</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
