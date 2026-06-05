@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV · BNP Paribas FSS Associate</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../templates/fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../../templates/fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 12mm 14mm;
+  }
+
+  /* HEADER */
+  .header { margin-bottom: 18px; }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 2px;
+    line-height: 1.1;
+  }
+
+  .header-sub {
+    font-size: 11px;
+    color: hsl(270, 70%, 45%);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    font-size: 10.5px;
+    color: #555;
+  }
+
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .sep { color: #ccc; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 16px; }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* SUMMARY */
+  .summary-text { font-size: 10.5px; line-height: 1.7; color: #2f2f2f; }
+
+  /* COMPETENCIES */
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .competency-tag {
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 3px 9px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  /* EXPERIENCE */
+  .job { margin-bottom: 13px; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .job-period { font-size: 10px; color: #777; white-space: nowrap; }
+
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 5px; }
+
+  .job ul { padding-left: 16px; margin-top: 4px; }
+
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 3px; }
+
+  .job li strong { font-weight: 600; }
+
+  /* PROJECTS */
+  .project { margin-bottom: 10px; }
+
+  .project-header { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 2px; }
+
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+
+  /* EDUCATION */
+  .edu-item { margin-bottom: 8px; }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+
+  /* CERTIFICATIONS */
+  .cert-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+
+  /* SKILLS */
+  .skills-block { margin-bottom: 6px; }
+
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+
+  .skill-list { font-size: 10.5px; color: #444; }
+
+  a { white-space: nowrap; }
+
+  .avoid-break, .job, .project, .edu-item, .cert-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 14mm 14mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-sub">MBA (Operations Management) · ICFAI Business School Mumbai, 2025</div>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+      <span class="sep">|</span>
+      <span>Dehradun, India · Open to relocate</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      MIS Reporting &amp; Operations Analyst with ~1.5 years of hands-on experience in periodic MIS reporting, KPI tracking, data extraction, internal report preparation, and data integrity workflows across cross-functional teams. <strong>MBA (Operations Management) — ICFAI Business School Mumbai, 2025.</strong> Proficient in MS Excel, PowerPoint, and Python-based reporting automation; experienced in data validation, reconciliation, audit workflows, and root-cause investigations on operational performance incidents. Backed by 9 end-to-end portfolio projects across Python, SQL, R, Power BI, and Tableau on real datasets totalling 1.2M+ records — including a financial data integrity validation engine and automated MIS reporting pipelines. <strong>Google Advanced Data Analytics Certified</strong> (full 7-of-7 Professional Certificate, May 2026) · 15 certifications total.
+    </div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section avoid-break">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">MIS Reporting</span>
+      <span class="competency-tag">KPI Tracking &amp; Metrics Ownership</span>
+      <span class="competency-tag">Data Extraction &amp; Computation</span>
+      <span class="competency-tag">Internal Reporting (Excel / PowerPoint)</span>
+      <span class="competency-tag">Data Validation &amp; Reconciliation</span>
+      <span class="competency-tag">Audit &amp; Control Reporting</span>
+      <span class="competency-tag">Root-Cause Analysis (RCA)</span>
+      <span class="competency-tag">Incident Documentation</span>
+      <span class="competency-tag">Cross-functional Coordination</span>
+      <span class="competency-tag">SQL · Python (Pandas) · Power BI</span>
+      <span class="competency-tag">MS Excel (Advanced) · PowerPoint</span>
+      <span class="competency-tag">Reporting Automation</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Logistics Integrators Pvt. Ltd.</span>
+        <span class="job-period">Mar 2025 – Mar 2026 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <ul>
+        <li>Prepared <strong>periodic MIS and performance reports</strong> tracking 10+ business KPIs across freight operations; established the single source of truth for cross-team reporting — eliminating discrepancies in weekly business reviews</li>
+        <li>Drove <strong>data extraction, validation, and reconciliation</strong> workflows across reporting systems: identified and resolved data integrity gaps, documented metric definitions, and maintained audit-ready datasets</li>
+        <li>Led <strong>root-cause analysis (RCA) on operational performance incidents</strong> — shipment delays, turnaround drops, cost overruns — partnering with 3–5 cross-functional teams to validate data, document findings, and ship corrective actions</li>
+        <li>Built SQL-based <strong>threshold-based alerting</strong> on operational and sales datasets, surfacing anomalies before they impacted SLAs; designed conversion and drop-off analysis on shipment journeys to inform process redesigns</li>
+        <li><strong>Automated recurring reporting pipelines</strong> in Python (Pandas, NumPy), reducing manual effort on weekly business reviews and improving turnaround on stakeholder-facing reports</li>
+        <li>Developed <strong>PowerPoint and Excel-based internal reports</strong> for management, translating complex operational data into structured, decision-ready presentations for senior stakeholders</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Vrun Minerals Pvt. Ltd.</span>
+        <span class="job-period">Feb 2024 – Jul 2024 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <ul>
+        <li>Cleaned and validated distributor and sales datasets using Excel and Python (Pandas); built dashboards with deviation highlighting on inventory and sales trends for daily operations</li>
+        <li>Performed <strong>inventory reconciliation and data accuracy checks</strong>, reducing reporting errors and improving stock visibility across the supply chain</li>
+        <li>Documented data workflows and measurement requirements, improving metric transparency for non-technical stakeholders; conducted business trend analysis to generate actionable supply-chain insights</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Selected Projects</div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Financial Data Integrity Checker</span>
+        <span class="project-badge">Control Validation</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · Matplotlib</div>
+      <div class="project-desc">
+        Engineered a <strong>10-rule validation engine</strong> on 700 real Microsoft financial records; all 10 validation rules passed, 14 profit outliers flagged via 3-sigma detection, completeness scored 91–100% per column. Directly mirrors a permanent control framework: rule-based control modeling, anomaly flagging, and completeness reporting.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Python Automation Pipeline — MIS Reporting</span>
+        <span class="project-badge">Reporting Automation</span>
+      </div>
+      <div class="project-tech">Python · Pandas · openpyxl · logging</div>
+      <div class="project-desc">
+        Built an end-to-end automated reporting pipeline on 1,000 retail records — ingest, clean, validate, analyse, and generate a <strong>5-sheet formatted Excel report</strong> with timestamps and audit logging; 100% data quality score, single-command execution. Equivalent to automated periodic status reports in an OPC environment.
+        <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project7_python_automation">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Interactive KPI Dashboard</span>
+        <span class="project-badge">Performance Tracking</span>
+      </div>
+      <div class="project-tech">Python · Streamlit · Plotly · Pandas</div>
+      <div class="project-desc">
+        Built a live multi-department dashboard tracking <strong>6 KPIs</strong> (on-time delivery, revenue, profit margin, delay days) across 180,519 real supply chain orders; 40.9% on-time delivery rate surfaced through automated alerting — analogous to control production dashboards for management reporting.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project2_kpi_dashboard">[GitHub]</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">MBA / PGPM — Operations Management</span><br>
+          <span class="edu-org">ICFAI Business School, Mumbai</span>
+        </div>
+        <span class="edu-year">2025 · CGPA 6.83</span>
+      </div>
+      <div class="edu-desc">Focus: data-driven decision making, process optimization, performance analytics, and financial management.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">Bachelor of Computer Applications (BCA)</span><br>
+          <span class="edu-org">Shree Guru Ram Rai I.T.S., Dehradun</span>
+        </div>
+        <span class="edu-year">2022 · 72.68%</span>
+      </div>
+      <div class="edu-desc">Foundation in programming (Java, Python), relational databases (SQL), and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+
+    <div class="cert-item">
+      <span class="cert-title">🏆 Google Advanced Data Analytics Professional Certificate (7/7 courses)</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</span>
+      <span class="cert-org">Udemy</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Mastering dbt (Data Build Tool) — Beginner to Pro (8 hrs)</span>
+      <span class="cert-org">Udemy</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Python for Data Science</span>
+      <span class="cert-org">IBM / Credly</span>
+      <span class="cert-year">Apr 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Data Analysis Using Python</span>
+      <span class="cert-org">IBM / Credly</span>
+      <span class="cert-year">Mar 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Power BI Essential Training</span>
+      <span class="cert-org">LinkedIn Learning</span>
+      <span class="cert-year">Mar 2026</span>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+
+    <div class="skills-block">
+      <span class="skill-category">Reporting &amp; MIS: </span>
+      <span class="skill-list">MS Excel (Advanced, Pivot Tables, Modelling), PowerPoint, MIS Report Preparation, Periodic Status Reports, Access Rights Campaign Tracking, Internal Reporting, Data Reconciliation, Audit Support</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">SQL &amp; Python: </span>
+      <span class="skill-list">SQL (joins, window functions, CTEs, aggregations), PostgreSQL, SQLite, Python (Pandas, NumPy, openpyxl), Statistical Analysis, Outlier Detection, Cohort Analysis</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">BI &amp; Visualisation: </span>
+      <span class="skill-list">Power BI (DAX, dashboard ownership), Tableau, Streamlit, Plotly, Executive Dashboards, Self-serve Analytics</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">Data Quality &amp; Control: </span>
+      <span class="skill-list">Data Validation, Data Integrity, ETL Audit, Reconciliation, Rule-based Control Modelling, Incident Documentation, RCA / Performance Monitoring</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">Collaboration: </span>
+      <span class="skill-list">Cross-functional Stakeholder Management, Data Storytelling, Non-technical Communication, Agile, Documentation</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV · Turing Remote Data Analyst</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../templates/fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../../templates/fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000; font-style: normal; font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 12mm 14mm; }
+
+  .header { margin-bottom: 16px; }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px; font-weight: 700;
+    color: #1a1a2e; letter-spacing: -0.02em;
+    margin-bottom: 2px; line-height: 1.1;
+  }
+
+  .header-sub { font-size: 11px; color: hsl(270, 70%, 45%); font-weight: 600; margin-bottom: 6px; }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px; margin-bottom: 10px;
+  }
+
+  .contact-row { display: flex; flex-wrap: wrap; gap: 5px 12px; font-size: 10.5px; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .sep { color: #ccc; }
+
+  .section { margin-bottom: 15px; }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px; margin-bottom: 9px;
+  }
+
+  .summary-text { font-size: 10.5px; line-height: 1.7; color: #2f2f2f; }
+
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .competency-tag {
+    font-size: 10px; font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 3px 9px; border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  .job { margin-bottom: 12px; }
+
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; }
+
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: hsl(270, 70%, 45%); }
+
+  .job-period { font-size: 10px; color: #777; white-space: nowrap; }
+
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 4px; }
+
+  .job ul { padding-left: 16px; margin-top: 3px; }
+
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 3px; }
+
+  .job li strong { font-weight: 600; }
+
+  .project { margin-bottom: 9px; }
+
+  .project-header { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: hsl(270, 70%, 45%); }
+
+  .project-badge {
+    font-size: 9px; font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px; border-radius: 2px;
+  }
+
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 2px; }
+
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+
+  .edu-item { margin-bottom: 7px; }
+
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+
+  .cert-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px;
+    align-items: baseline; gap: 10px; margin-bottom: 5px;
+  }
+
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+
+  .skills-block { margin-bottom: 5px; }
+
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+
+  .skill-list { font-size: 10.5px; color: #444; }
+
+  a { white-space: nowrap; }
+
+  .avoid-break, .job, .project, .edu-item, .cert-item {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 10mm 12mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-sub">Data Analyst · ML Evaluation · Americas-shift compatible (IST, 4 hrs PST overlap)</div>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+      <span class="sep">|</span>
+      <span>Dehradun, India · Remote · Open to PST-overlap hours</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      Data Analyst with ~1.5 years of hands-on experience in Python (Pandas, NumPy, Scikit-learn), SQL, and statistical analysis — with a focus on ML model evaluation, anomaly detection, and data quality validation. <strong>Google Advanced Data Analytics Certified</strong> (full 7-of-7 Professional Certificate, May 2026) covering EDA, statistics, regression, supervised learning (Random Forest, XGBoost, Decision Trees), and model evaluation (AUC/ROC, confusion matrices, feature importance). Built and evaluated 3 ML models on real production-scale datasets: Logistic Regression (AUC 0.837), Random Forest (0.824), and Decision Tree (0.781). Backed by 9 end-to-end portfolio projects across Python, SQL, R, and Power BI on 1.2M+ records. <strong>Americas-shift compatible</strong> — available for 4+ hours of PST overlap daily.
+    </div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section avoid-break">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">ML Model Evaluation (AUC/ROC/F1)</span>
+      <span class="competency-tag">Statistical Analysis &amp; Hypothesis Testing</span>
+      <span class="competency-tag">Python (Pandas · NumPy · Scikit-learn)</span>
+      <span class="competency-tag">SQL (Window Functions · CTEs)</span>
+      <span class="competency-tag">Anomaly &amp; Outlier Detection</span>
+      <span class="competency-tag">Data Quality &amp; Validation</span>
+      <span class="competency-tag">EDA &amp; Pattern Recognition</span>
+      <span class="competency-tag">R (randomForest · caret · pROC)</span>
+      <span class="competency-tag">Reproducible Analysis Workflows</span>
+      <span class="competency-tag">Large Dataset Analysis (1.2M+ records)</span>
+      <span class="competency-tag">Power BI · Tableau · Plotly</span>
+      <span class="competency-tag">Documented, Clean Code (GitHub)</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Logistics Integrators Pvt. Ltd.</span>
+        <span class="job-period">Mar 2025 – Mar 2026 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <ul>
+        <li>Built <strong>SQL-based statistical anomaly detection</strong> and threshold-based alerting on operational and sales datasets — using Z-score and IQR logic to flag outliers before SLA impact; analogous to diagnosing ML model failure modes and edge cases in production</li>
+        <li>Owned <strong>data quality and integrity workflows</strong>: validation, reconciliation, and ETL audit across reporting systems — eliminating discrepancies and maintaining analysis-ready datasets</li>
+        <li>Conducted <strong>root-cause analysis (RCA)</strong> on performance anomalies — decomposed multi-variable incidents, traced causes through data lineage, and partnered with 3-5 cross-functional teams to validate findings and ship corrective actions</li>
+        <li>Automated recurring analytical workflows in <strong>Python (Pandas, NumPy)</strong>, producing reproducible, well-documented reporting pipelines with audit logging and timestamped outputs</li>
+        <li>Led <strong>conversion and funnel analysis</strong> on shipment journeys — computing drop-off rates, stage-by-stage throughput, and cohort-level performance patterns</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Vrun Minerals Pvt. Ltd.</span>
+        <span class="job-period">Feb 2024 – Jul 2024 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <ul>
+        <li>Cleaned and validated distributor and sales datasets using Python (Pandas) and Excel; built deviation-highlighting dashboards on inventory and sales trends</li>
+        <li>Performed inventory reconciliation and data accuracy checks; documented workflows and metric definitions for non-technical stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS — ML & ANALYTICS FIRST -->
+  <div class="section">
+    <div class="section-title">Projects — ML Evaluation &amp; Analytics</div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Customer Churn Prediction — ML Model Evaluation</span>
+        <span class="project-badge">ML Evaluation · R</span>
+      </div>
+      <div class="project-tech">R · tidyverse · randomForest · caret · pROC · ggplot2</div>
+      <div class="project-desc">
+        Trained and evaluated 3 ML models on 7,043 Telco customer records. <strong>Logistic Regression: AUC 0.837</strong> (best); Random Forest: 0.824; Decision Tree: 0.781. Produced 8 EDA plots, ROC curves per model, confusion matrices, and feature importance charts. Full model comparison workflow with reproducible R code.
+        <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project8_churn_prediction_r">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Fraud &amp; Anomaly Detection System</span>
+        <span class="project-badge">Anomaly Detection · Python</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · SciPy · Scikit-learn</div>
+      <div class="project-desc">
+        Applied <strong>Z-score, IQR, and rule-based risk scoring (0-100)</strong> to 283,726 real European credit card transactions; flagged 2,838 suspicious records at a 0.17% fraud rate on a 284,807-row dataset. Includes threshold calibration, false-positive analysis, and explainable scoring output.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project1_fraud_detection">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Google ADAC Capstone — Automatidata EDA (408K NYC Taxi Trips)</span>
+        <span class="project-badge">EDA · PACE Framework</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · Matplotlib · Seaborn · Tableau</div>
+      <div class="project-desc">
+        Full EDA on 408,294 NYC TLC Yellow Taxi trips (18 columns); engineered 5 features, applied IQR outlier detection, flagged ~0.5% zero-distance anomalies. Built 4 Python visualisations + Tableau scatter plot; documented findings using PACE framework and executive summary — demonstrating structured analytical artifact creation.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/google-data-analytics-certificate/course-2-automatidata">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Financial Data Integrity Checker</span>
+        <span class="project-badge">Data Quality · Validation</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · Matplotlib</div>
+      <div class="project-desc">
+        10-rule validation engine on 700 Microsoft financial records; all rules passed, 14 profit outliers flagged via 3-sigma detection, completeness scored 91-100% per column. Reproducible, documented validation pipeline.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">SQL Retail Analysis — Cohort, RFM &amp; Statistical Reporting</span>
+        <span class="project-badge">SQL · Statistics</span>
+      </div>
+      <div class="project-tech">SQL · SQLite · Python</div>
+      <div class="project-desc">
+        Loaded 805,549 rows from 525,461 transactions; wrote 15 advanced queries covering window functions, CTEs, RFM segmentation, cohort retention, and MoM revenue growth via LAG() — across 5,878 customers in 41 countries.
+        <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project5_sql_retail_analysis">[GitHub]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">MBA / PGPM — Operations Management</span><br>
+          <span class="edu-org">ICFAI Business School, Mumbai</span>
+        </div>
+        <span class="edu-year">2025 · CGPA 6.83</span>
+      </div>
+      <div class="edu-desc">Focus: data-driven decision making, process optimization, performance analytics.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">Bachelor of Computer Applications (BCA)</span><br>
+          <span class="edu-org">Shree Guru Ram Rai I.T.S., Dehradun</span>
+        </div>
+        <span class="edu-year">2022 · 72.68%</span>
+      </div>
+      <div class="edu-desc">Programming (Java, Python), relational databases (SQL), analytical problem solving.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+
+    <div class="cert-item">
+      <span class="cert-title">🏆 Google Advanced Data Analytics Professional Certificate (7/7) — EDA, Statistics, Regression, ML, Capstone</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">The Nuts and Bolts of Machine Learning — supervised learning, Random Forest, XGBoost, model tuning</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">The Power of Statistics — hypothesis testing, probability distributions, inference</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</span>
+      <span class="cert-org">Udemy</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Python for Data Science &amp; Data Analysis Using Python</span>
+      <span class="cert-org">IBM / Credly</span>
+      <span class="cert-year">2026</span>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+
+    <div class="skills-block">
+      <span class="skill-category">ML Evaluation: </span>
+      <span class="skill-list">AUC/ROC Analysis, Confusion Matrix, Feature Importance, Model Comparison, Supervised Learning (Logistic Regression, Random Forest, Decision Tree, XGBoost), Outlier Detection (Z-score, IQR), Statistical Inference, Hypothesis Testing</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">Python: </span>
+      <span class="skill-list">Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, Seaborn, openpyxl, Streamlit, Plotly — clean, documented, reproducible pipelines</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">SQL: </span>
+      <span class="skill-list">PostgreSQL, SQLite — joins, window functions, CTEs, aggregations, LAG/LEAD, RFM, cohort analysis</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">R: </span>
+      <span class="skill-list">tidyverse, randomForest, caret, pROC, ggplot2 — full ML pipeline including EDA, training, evaluation, ROC curves</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">BI &amp; Reporting: </span>
+      <span class="skill-list">Power BI (DAX), Tableau, dbt (Fundamentals cert), ETL Validation, Data Quality Workflows</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

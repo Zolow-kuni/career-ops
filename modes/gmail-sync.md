@@ -51,6 +51,32 @@ Collect all unique `threadId` values. Deduplicate across queries.
 
 **Skip threads already labelled `career-ops/synced`** — they were processed in a previous run.
 
+### LinkedIn sender handling — CRITICAL
+
+LinkedIn sends both **high-signal** and **noise** emails from different sub-senders. **Never blanket-exclude `from:linkedin.com`** — that suppresses application-status updates. Instead:
+
+**INCLUDE these LinkedIn senders (high signal — must process):**
+- `from:jobs-noreply@linkedin.com` — "Your application was viewed by X" / "Apply to your saved jobs" — application engagement signals
+- `from:invitations@linkedin.com` — "{Name} is waiting for your response" — inbound connection requests (potential recruiters or warm leads)
+- `from:messaging-digest-noreply@linkedin.com` — recruiter DM summaries
+- `from:messages-noreply@linkedin.com` — DM thread digests
+- `from:inmail-hit-reply@linkedin.com` — InMail responses
+- `from:security-noreply@linkedin.com` — account security (logins, password resets — just label as synced after review)
+
+**EXCLUDE these LinkedIn senders (pure noise):**
+- `from:jobalerts-noreply@linkedin.com` — daily personalized job suggestions (LinkedIn's algorithmic feed, not actionable)
+- `from:newsletters-noreply@linkedin.com` — newsletter content
+- `from:linkedin@em.linkedin.com` — marketing / Premium upsells
+- `from:messages-noreply@linkedin.com` with subject containing "profile views" — informational only
+
+**Recommended catch-all query for LinkedIn signals:**
+
+```
+(from:jobs-noreply@linkedin.com OR from:invitations@linkedin.com OR from:messaging-digest-noreply@linkedin.com OR from:inmail-hit-reply@linkedin.com) newer_than:30d -label:career-ops/synced
+```
+
+When a `jobs-noreply` "application was viewed by X" surfaces a company **NOT in tracker**, it means an application was made (likely via LinkedIn Easy Apply) but never logged. **Add it as a tracker entry retroactively.**
+
 ---
 
 ## Step 3 — Read and classify each thread

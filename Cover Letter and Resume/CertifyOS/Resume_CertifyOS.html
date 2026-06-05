@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV · CertifyOS Operations Analyst India</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../templates/fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../../templates/fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000; font-style: normal; font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; line-height: 1.5;
+    color: #1a1a2e; background: #ffffff;
+  }
+
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 12mm 14mm; }
+
+  .header { margin-bottom: 16px; }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px; font-weight: 700;
+    color: #1a1a2e; letter-spacing: -0.02em;
+    margin-bottom: 2px; line-height: 1.1;
+  }
+
+  .header-sub { font-size: 11px; color: hsl(270, 70%, 45%); font-weight: 600; margin-bottom: 6px; }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px; margin-bottom: 10px;
+  }
+
+  .contact-row { display: flex; flex-wrap: wrap; gap: 5px 12px; font-size: 10.5px; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .sep { color: #ccc; }
+
+  .section { margin-bottom: 15px; }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px; margin-bottom: 9px;
+  }
+
+  .summary-text { font-size: 10.5px; line-height: 1.7; color: #2f2f2f; }
+
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .competency-tag {
+    font-size: 10px; font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 3px 9px; border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  .job { margin-bottom: 12px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 4px; }
+  .job ul { padding-left: 16px; margin-top: 3px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 3px; }
+  .job li strong { font-weight: 600; }
+
+  .project { margin-bottom: 9px; }
+  .project-header { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .project-badge { font-size: 9px; font-weight: 500; color: hsl(187, 74%, 32%); background: hsl(187, 40%, 95%); padding: 1px 6px; border-radius: 2px; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 2px; }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+
+  .edu-item { margin-bottom: 7px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+
+  .cert-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px;
+    align-items: baseline; gap: 10px; margin-bottom: 5px;
+  }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+
+  .skills-block { margin-bottom: 5px; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  .skill-list { font-size: 10.5px; color: #444; }
+
+  a { white-space: nowrap; }
+  .avoid-break, .job, .project, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 10mm 12mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-sub">Operations Analyst · MBA (Operations Management) · ICFAI Business School Mumbai, 2025</div>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+      <span class="sep">|</span>
+      <span>Dehradun, India · Open to relocate to Pune / Bengaluru · Immediate joiner</span>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      Operations Analyst with ~1.5 years of experience managing <strong>high-accuracy data processing, cross-functional coordination, process documentation, and stakeholder communication</strong> in fast-paced operations environments. <strong>MBA (Operations Management) — ICFAI Business School Mumbai, 2025</strong>; Bachelor of Computer Applications (BCA), 2022. Proficient in MS Excel, MS Office Suite, and Google Workspace; experienced in conducting large-volume research, validating and authenticating information to 100% accuracy standards, and producing clear written summaries and guideline documents for non-technical stakeholders. <strong>Google Advanced Data Analytics Certified</strong> (May 2026) — 15 certifications in one year demonstrating consistent fast domain acquisition and the ability to ramp quickly in new operational environments.
+    </div>
+  </div>
+
+  <!-- COMPETENCIES -->
+  <div class="section avoid-break">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Data Validation &amp; 100% Accuracy Standards</span>
+      <span class="competency-tag">Large-Volume Research &amp; Interpretation</span>
+      <span class="competency-tag">Process Documentation &amp; Guideline Writing</span>
+      <span class="competency-tag">Cross-functional Coordination &amp; Follow-up</span>
+      <span class="competency-tag">MS Excel · MS Office Suite · Google Workspace</span>
+      <span class="competency-tag">Written &amp; Verbal Communication (English)</span>
+      <span class="competency-tag">Deadline Management &amp; Prioritisation</span>
+      <span class="competency-tag">Reconciliation &amp; Discrepancy Resolution</span>
+      <span class="competency-tag">Stakeholder &amp; Client Email Communication</span>
+      <span class="competency-tag">Attention to Detail</span>
+      <span class="competency-tag">Root-Cause Analysis &amp; Problem Solving</span>
+      <span class="competency-tag">Fast Domain Acquisition</span>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Logistics Integrators Pvt. Ltd.</span>
+        <span class="job-period">Mar 2025 – Mar 2026 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <ul>
+        <li><strong>High-accuracy data validation:</strong> Owned data integrity workflows — validation, reconciliation, and discrepancy resolution — maintaining audit-ready, 100%-accurate datasets across cross-functional reporting systems</li>
+        <li><strong>Cross-functional coordination &amp; follow-up:</strong> Led root-cause investigations partnering with 3–5 cross-functional teams to validate conflicting records, gather missing information, and drive corrective action — mirrors persistent provider and client follow-up in credentialing operations</li>
+        <li><strong>Process documentation &amp; reporting:</strong> Documented data workflows, metric definitions, and standard operating procedures; prepared management-level summaries in Excel and PowerPoint for weekly business reviews</li>
+        <li><strong>Large-volume research &amp; analysis:</strong> Conducted systematic research on operational and sales datasets, interpreting findings and drafting clear written summaries for non-technical stakeholders and senior management</li>
+        <li><strong>Deadline-driven operations:</strong> Managed recurring reporting cycles under tight turnaround requirements, consistently delivering accurate outputs on schedule</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Vrun Minerals Pvt. Ltd.</span>
+        <span class="job-period">Feb 2024 – Jul 2024 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <ul>
+        <li>Performed inventory reconciliation and data accuracy checks across daily operations; documented findings with deviation highlights for management review using Excel and Google Sheets</li>
+        <li>Conducted business research and trend analysis; translated findings into clear, concise written reports for non-technical stakeholders to support supply-chain decisions</li>
+        <li>Managed stakeholder communication and coordinated across teams to resolve data discrepancies and gather operational information within set deadlines</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Selected Projects</div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Financial Data Integrity Checker</span>
+        <span class="project-badge">Validation · Accuracy</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · Matplotlib</div>
+      <div class="project-desc">
+        Built a 10-rule validation engine on 700 Microsoft financial records; all 10 rules passed, 14 outliers detected, completeness scored 91-100% per column. Demonstrates systematic approach to validating and authenticating data to zero-error standards — directly applicable to credentialing record accuracy.
+        <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Python Automation Pipeline — Reporting</span>
+        <span class="project-badge">Process Automation</span>
+      </div>
+      <div class="project-tech">Python · Pandas · openpyxl · logging</div>
+      <div class="project-desc">
+        End-to-end pipeline: ingest, clean, validate, analyse, and auto-generate a 5-sheet formatted Excel report with audit logging; 100% data quality score, single-command execution — shows ability to build and maintain repeatable, high-accuracy operational workflows.
+        <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project7_python_automation">[GitHub]</a>
+      </div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">SQL Retail Analysis — 805K Rows</span>
+        <span class="project-badge">Research &amp; Analysis</span>
+      </div>
+      <div class="project-tech">SQL · SQLite · Python</div>
+      <div class="project-desc">
+        Cleaned and analysed 805,549 rows across 5,878 customers and 41 countries; produced structured findings with actionable business summaries. Demonstrates ability to conduct and interpret large-volume research systematically.
+        <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project5_sql_retail_analysis">[GitHub]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">MBA / PGPM — Operations Management</span><br>
+          <span class="edu-org">ICFAI Business School, Mumbai</span>
+        </div>
+        <span class="edu-year">2025 · CGPA 6.83</span>
+      </div>
+      <div class="edu-desc">Focus: process optimization, performance analytics, business operations, stakeholder management.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div>
+          <span class="edu-title">Bachelor of Computer Applications (BCA)</span><br>
+          <span class="edu-org">Shree Guru Ram Rai I.T.S., Dehradun</span>
+        </div>
+        <span class="edu-year">2022 · 72.68%</span>
+      </div>
+      <div class="edu-desc">Programming, relational databases, analytical problem solving, computer applications.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">Certifications (15 total — selected)</div>
+    <div class="cert-item">
+      <span class="cert-title">🏆 Google Advanced Data Analytics Professional Certificate (7/7 courses)</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">The Power of Statistics — hypothesis testing, probability, inference</span>
+      <span class="cert-org">Google / Coursera</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Data Analysis Using Python</span>
+      <span class="cert-org">IBM / Credly</span>
+      <span class="cert-year">Mar 2026</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</span>
+      <span class="cert-org">Udemy</span>
+      <span class="cert-year">May 2026</span>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-block">
+      <span class="skill-category">Operations &amp; Process: </span>
+      <span class="skill-list">Data Validation &amp; Authentication, Reconciliation, Process Documentation, SOP Writing, Compliance Tracking, Deadline Management, Stakeholder Follow-up, Client Communication</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">Tools: </span>
+      <span class="skill-list">MS Excel (Advanced, Pivot Tables), MS Office Suite (Word, PowerPoint, Outlook), Google Workspace (Docs, Sheets, Drive), SQL, Python (Pandas), Power BI, Tableau</span>
+    </div>
+    <div class="skills-block">
+      <span class="skill-category">Soft Skills: </span>
+      <span class="skill-list">English Fluency (written &amp; verbal), Attention to Detail, Research Interpretation, Clear Written Communication, Multi-task Management, Adaptability</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
