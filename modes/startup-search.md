@@ -10,6 +10,7 @@ outreach lands better here than on LinkedIn.
 
 - `config/profile.yml` — candidate profile (roles, skills, experience)
 - `data/applications.md` — existing tracker (dedup check)
+- `data/startup-targets-india.md` — shortlist of 202 India-based YC startups (PrepDB directory)
 - `cv.md` — proof points for drafts
 
 ## Search Sources
@@ -18,6 +19,14 @@ outreach lands better here than on LinkedIn.
 |--------|-----|-------|
 | Wellfound | wellfound.com/jobs | Startup-focused, strong India remote listings |
 | YC Jobs | workatastartup.com | YC-backed companies only, high signal |
+
+## Company Target List
+
+`data/startup-targets-india.md` holds 202 India-based YC-backed companies pulled from
+PrepDB's startup directory (filtered to India locations). PrepDB itself has no job listings —
+it's a company directory only. Use this list to **scope** the Wellfound/YC/LinkedIn search:
+prioritize roles at these named companies over generic keyword scans, since they're
+pre-vetted as India-relevant and YC-backed (signal of funding + active hiring).
 
 ## Search Parameters
 
@@ -31,8 +40,12 @@ outreach lands better here than on LinkedIn.
 ## Steps
 
 ### STEP 1 — Search
-Use WebSearch / WebFetch to pull listings from Wellfound and YC Jobs.
-Query format: `site:wellfound.com "data analyst" India`
+Two passes:
+1. **Targeted pass:** for each company in `data/startup-targets-india.md`, search
+   `site:wellfound.com "[Company]" jobs` or `site:linkedin.com/jobs "[Company]"` combined
+   with target-role keywords. Also check the company's own careers page if findable.
+2. **Broad pass:** Use WebSearch / WebFetch for generic listings on Wellfound and YC Jobs.
+   Query format: `site:wellfound.com "data analyst" India`
 
 ### STEP 2 — Dedup
 Check `data/applications.md` by Company + Role.
