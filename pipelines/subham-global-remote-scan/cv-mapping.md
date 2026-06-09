@@ -47,3 +47,16 @@ For URLs that were rejected (geographic gating, expired, salary breach, etc.) th
 | `output/cv-subham-resend.pdf` | CV2-flavored | Resend T&S (#007) | ✅ Existed from prior session |
 | `output/cv-subham-cred.pdf` | CV1-flavored | CRED Product Analyst (#008) | ✅ Existed from prior session |
 | `output/cv-subham-peakflo.pdf` | CV2-Peakflo | Peakflo Data Analyst (#D1) | ✅ Generated 2026-05-20 · 123.2 KB · 2pp |
+
+## [REMOTE BOARD SCAN — Subham] — 2026-05-30 CV mappings (recalibrated)
+
+| Score | Company | Role | CV | Reasoning |
+|------:|---------|------|----|-----------|
+| 6.6 | Fusemachines | Data Analyst | **CV1** | Power BI + SQL + DAX generalist analytics |
+| 5.5-6.0 | Nanonets (Growth) | Product Analyst — Growth | **CV1** | SQL + product metrics + A/B tests, generalist |
+| 5.5-6.0 | Nanonets | Product Analyst | **CV1** | SQL + product analytics, AI doc automation |
+| 6.0 | Gridware | Junior Data Analyst Remote | **CV1** | Generalist data analyst, Hyderabad-based |
+| 5.5 | Numeral (YC) | Data Analyst | **CV2** | Reconciliation ops + financial data quality = risk framing |
+| 5.3 | Explorex (YC) | Data Analyst | **CV2** | Data quality + warehouse focus = anomaly/QA framing |
+| 4.3 | WWR | Digital Analytics Engineer GA4/GTM | **CV1** | GA4/GTM learnable, generalist framing |
+

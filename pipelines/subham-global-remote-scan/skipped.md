@@ -85,3 +85,12 @@ The 27 skipped URLs share a structural pattern: Western remote-first boards aggr
 - Wellfound India startup salary band
 - AngelList India-based remote companies
 - Hasura, Razorpay, etc. via their own careers pages with India-rate bands
+
+## [REMOTE BOARD SCAN — Subham] — 2026-05-30 additions
+
+| Company | Role | Score | Reason | Source |
+|---------|------|------:|--------|--------|
+| Crossing Hurdles | Data Analyst (Remote, $15-25/hr) | 2.0 | Staffing middleman pattern — same firm already SKIPPED 5+ times in main tracker as gig-economy contractor pipeline | RemoteOK |
+| Chime Financial | Insights Analyst — Dispute Experience | 3.0 | US-based neobank. US-only hiring likely (W-2 restriction) | RemoteOK |
+| Appletree Medical Group | Junior Product Analyst (Toronto) | 2.5 | Canada residency required + healthcare CX role off-track from analyst archetypes | RemoteOK |
+

@@ -58,7 +58,7 @@
 
 | # | Company | Role | Score | CV | Location | Remote | Exp | Source | Notes |
 |---|---------|------|------:|----|----------|--------|-----|--------|-------|
-| D3 | Nanonets | Product Analyst - Growth | **4.8** | CV1 | Gurugram, Hybrid | Hybrid (quarterly in-office) | 2-4 yrs | greenhouse | SQL+metrics+A/B tests. Floor is 2-4 yrs (Subham has 1.5 → below), but company is Series B AI/automation. Worth applying with strong cover letter. |
+| D3 | Nanonets | Product Analyst - Growth | **4.8** | CV1 | Gurugram, Hybrid | Hybrid (quarterly in-office) | 2-4 yrs | greenhouse | ❌ EXPIRED 2026-05-31 — closed before apply window |
 | D4 | Nanonets | Product Analyst | **4.5** | CV1 | Gurugram/Bangalore, Hybrid | Hybrid | 2-4 yrs | greenhouse | Same team/company as D3. Apply only if D3 not suitable. |
 | D5 | Paisabazaar | Data Analyst | **4.5\*** | CV1 | Gurgaon (likely on-site) | Unknown | 0-2 yrs | instahyre-403 | Fintech lending, 0-2 yrs. *Unverified (403).* On-site likely → commute from Dehradun = blocker unless relocation acceptable. |
 | D6 | Bizongo | Data Analyst (BI) | **4.5\*** | CV2 | Mumbai | Unknown | 1-5 yrs | instahyre-403 | B2B supply chain, Power BI+SQL. *Unverified (403).* Mumbai on-site = relocation required. |
@@ -85,3 +85,39 @@
 3. **NEW: Apply to Peakflo D1** (Remote India, 6.5) — use CV2 with cover letter emphasizing data quality + ops automation.
 4. **Consider Fusemachines #8** if LATAM region eligibility verifies — only prior PARALLEL scan pass.
 6. **Nanonets D3** — worth a stretch application if Subham is willing to pitch on potential over pedigree (cover letter must address the exp gap).
+
+---
+
+## [REMOTE BOARD SCAN — Subham] — 2026-05-30 Update
+
+**Quality gate after recalibration with current profile (15 certs · 🏆 Google ADA Certified):** 4 candidates now ≥ 6.0 (up from 1 on May 20).
+
+### 🔥 Must Apply (8.0–10)
+
+*(none — structural ceiling for remote-first US/EU boards is ~6.6 for India-based juniors)*
+
+### ✅ Good Fit (6.0–7.9) — RECALIBRATED 2026-05-30
+
+| # | Company | Role | Score | CV | Location | Source | Status | URL |
+|---|---------|------|------:|----|----------|--------|--------|-----|
+| 1 | Fusemachines | Data Analyst | **6.6** | CV1 | LATAM (verify global-hire policy) | workingnomads | Email verification needed | https://www.workingnomads.com/jobs/data-analyst-fusemachines-1565872 |
+| 2 | Nanonets | Product Analyst — Growth | **5.5–6.0** | CV1 | Gurugram Hybrid | greenhouse | ❌ EXPIRED 2026-05-31 | https://job-boards.greenhouse.io/nanonets/jobs/5137596008 |
+| 3 | Nanonets | Product Analyst | **5.5–6.0** | CV1 | Gurugram Hybrid | greenhouse | URL liveness check needed | https://job-boards.greenhouse.io/nanonets/jobs/5116804008 |
+| 4 | Gridware | Junior Data Analyst (Remote) | **6.0** | CV1 | Hyderabad Remote | linkedin | $12-18K USD = competitive vs INR target | https://in.linkedin.com/jobs/view/3832753095 |
+
+### 🔄 Maybe (4.0–5.9) — RECALIBRATED 2026-05-30
+
+| # | Company | Role | Score | Source | Notes |
+|---|---------|------|------:|--------|-------|
+| 5 | Numeral (YC) | Data Analyst | **5.5** | workatastartup | CV2 fit (reconciliation ops). "Primarily SF/NY, some remote." |
+| 6 | Explorex (YC) | Data Analyst | **5.3** | workatastartup | CV2 fit (data quality / warehouse). Remote indicated. |
+| 7 | WWR (self) | Digital Analytics Engineer GA4/GTM | **4.3** | weworkremotely | Stack gap (GA4/GTM not in CV) — learnable |
+
+### ❌ Skip (<4.0) — 2026-05-30 deltas added
+
+| # | Company | Role | Score | Reason | Source |
+|---|---------|------|------:|--------|--------|
+| 8 | Crossing Hurdles | Data Analyst | 2.0 | Staffing middleman pattern (5+ skips already in main tracker) | RemoteOK |
+| 9 | Chime Financial | Insights Analyst — Dispute Experience | 3.0 | US neobank, US-only hiring likely | RemoteOK |
+| 10 | Appletree Medical Group | Junior Product Analyst | 2.5 | Canada residency required + healthcare domain off-track | RemoteOK |
+

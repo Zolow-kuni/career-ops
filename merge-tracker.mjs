@@ -7,7 +7,9 @@
  * - 8-col: num\tdate\tcompany\trole\tstatus\tscore\tpdf\treport (no notes)
  * - Pipe-delimited (markdown table row): | col | col | ... |
  *
- * Dedup: company normalized + role fuzzy match + report number match
+ * Dedup: report number match (from [N](reports/...) link) + company-normalized/role-fuzzy match.
+ * NOTE: TSV `num` is a *report* number — never compare it to a tracker row's `#`,
+ * those are unrelated sequences (see incident: ELSA report #124 clobbered tracker row #124).
  * If duplicate with higher score → update in-place, update report link
  * Validates status against states.yml (rejects non-canonical, logs warning)
  *
@@ -322,11 +324,6 @@ for (const file of tsvFiles) {
       const existingReportNum = extractReportNum(app.report);
       return existingReportNum === reportNum;
     });
-  }
-
-  if (!duplicate) {
-    // Exact entry number match
-    duplicate = existingApps.find(app => app.num === addition.num);
   }
 
   if (!duplicate) {

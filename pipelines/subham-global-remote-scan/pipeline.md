@@ -62,7 +62,7 @@
 <!-- Salary filter: $10K/yr floor NOT applied to these India-priced sources per user directive -->
 
 - [ ] [yc-jobs] https://www.ycombinator.com/companies/peakflo/jobs/StcNZf7-data-analyst-remote-india | Peakflo (YC W22) | Data Analyst | Remote, India | 1-3 yrs | Python+SQL+dashboards, fintech ops automation
-- [ ] [greenhouse] https://job-boards.greenhouse.io/nanonets/jobs/5137596008 | Nanonets | Product Analyst - Growth | Gurugram, India (Hybrid) | 2-4 yrs | SQL+metrics+A/B tests, Series B AI startup
+- [x] [greenhouse] https://job-boards.greenhouse.io/nanonets/jobs/5137596008 | Nanonets | Product Analyst - Growth | Gurugram, India (Hybrid) | 2-4 yrs | ❌ EXPIRED — confirmed closed 2026-05-31 via check-liveness.mjs (redirects to error page)
 - [ ] [greenhouse] https://job-boards.greenhouse.io/nanonets/jobs/5116804008 | Nanonets | Product Analyst | Gurugram, India (Hybrid) | 2-4 yrs | SQL+product metrics, AI document automation
 - [x] [instahyre-403] https://www.instahyre.com/job-309989-analyst-trainee-at-deloitte-work-from-home/ | Deloitte | Analyst Trainee | Work From Home | 0-2 yrs | ❌ EXPIRED — confirmed closed by user 2026-05-20
 - [ ] [instahyre-403] https://www.instahyre.com/job-296152-data-analyst-at-paisabazaar-2-gurgaon/ | Paisabazaar | Data Analyst | Gurgaon (on-site likely) | 0-2 yrs | Python+SQL, fintech lending — **unverified (403)**
@@ -75,3 +75,16 @@
 ## Processed
 
 <!-- After scoring, URLs move here in the form: - [x] #NNN | URL | Company | Role | Score/5 | CV variant | recommendation -->
+
+## [REMOTE BOARD SCAN — Subham] — 2026-05-30 fresh URLs
+
+- [ ] [remoteok] https://remoteOK.com/remote-jobs/remote-insights-analyst-dispute-experience-chime-financial-inc-1132453 | Chime Financial | Insights Analyst Dispute Experience | Remote (US) | 2026-05-28 — SKIP (US-only)
+- [ ] [remoteok] https://remoteOK.com/remote-jobs/remote-junior-product-analyst-appletree-medical-group-1132515 | Appletree Medical Group | Junior Product Analyst | Toronto, Canada | 2026-05-28 — SKIP (Canada residency)
+
+## Processed (2026-05-30 recalibration tier)
+
+- [x] (pending live-check) Fusemachines | Data Analyst | 6.6/10 | CV1 | https://www.workingnomads.com/jobs/data-analyst-fusemachines-1565872
+- [x] ❌ EXPIRED 2026-05-31 — Nanonets | Product Analyst Growth | 5.5-6.0/10 | CV1 | https://job-boards.greenhouse.io/nanonets/jobs/5137596008
+- [x] (pending live-check) Nanonets | Product Analyst | 5.5-6.0/10 | CV1 | https://job-boards.greenhouse.io/nanonets/jobs/5116804008
+- [x] (pending live-check) Gridware | Junior Data Analyst Remote | 6.0/10 | CV1 | https://in.linkedin.com/jobs/view/3832753095
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV · Analytics Engineer / Data Pipelines</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('../../templates/fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('../../templates/fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 12mm 14mm; }
+  .header { margin-bottom: 16px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 2px; line-height: 1.1; }
+  .header-sub { font-size: 11px; color: hsl(270, 70%, 45%); font-weight: 600; margin-bottom: 6px; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 5px 12px; font-size: 10.5px; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .sep { color: #ccc; }
+  .section { margin-bottom: 15px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 9px; }
+  .summary-text { font-size: 10.5px; line-height: 1.7; color: #2f2f2f; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .competency-tag { font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 3px 9px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 12px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 4px; }
+  .job ul { padding-left: 16px; margin-top: 3px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 3px; }
+  .job li strong { font-weight: 600; }
+  .project { margin-bottom: 9px; }
+  .project-header { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .project-badge { font-size: 9px; font-weight: 500; color: hsl(187, 74%, 32%); background: hsl(187, 40%, 95%); padding: 1px 6px; border-radius: 2px; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 2px; }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+  .edu-item { margin-bottom: 7px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 10px; margin-bottom: 5px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+  .skills-block { margin-bottom: 5px; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  .skill-list { font-size: 10.5px; color: #444; }
+  a { white-space: nowrap; }
+  .avoid-break, .job, .project, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 10mm 12mm; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-sub">Data Analyst · Analytics Engineer · SQL &amp; Python Pipelines · dbt · ELT/ETL · Power BI</div>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+      <span class="sep">|</span>
+      <span>Open to relocate anywhere in India (Delhi preferred) · Remote / Hybrid / On-site · Immediate joiner</span>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      Data Analyst / Analytics Engineer with ~1.5 years of experience building <strong>SQL- and Python-based data pipelines — ingestion through validation, transformation, and delivery</strong> — across logistics and operations environments, not just static dashboards. Hands-on with <strong>dbt, ELT/ETL workflows, data validation, and statistical anomaly detection</strong>, owning the full pipeline from raw data to self-serve BI delivery (Power BI, Tableau). Built an end-to-end automated ingest-clean-validate-report pipeline (100% data-quality score), a fraud-detection scoring engine on 283K+ transactions, and a SQL transformation pipeline loading 805K+ rows with advanced cohort/RFM analysis. <strong>Google Advanced Data Analytics Certified</strong> (7-of-7 Professional Certificate), plus PostgreSQL and dbt certifications — 15 certifications total. Targeting Data Analyst, Business Analyst, or Analytics Engineer roles in technical environments where I can build and own pipelines end-to-end.
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">SQL · CTEs · Window Functions · PostgreSQL</span>
+      <span class="competency-tag">dbt · ELT/ETL Pipeline Design</span>
+      <span class="competency-tag">Python (Pandas, NumPy) · Pipeline Automation</span>
+      <span class="competency-tag">Data Transformation &amp; Validation</span>
+      <span class="competency-tag">Data Quality · Integrity · Reconciliation</span>
+      <span class="competency-tag">Statistical Analysis · Anomaly Detection</span>
+      <span class="competency-tag">Cohort &amp; RFM Segmentation · Funnel Analytics</span>
+      <span class="competency-tag">Power BI · Tableau · Self-serve BI Delivery</span>
+      <span class="competency-tag">KPI Ownership · RCA / Incident Investigation</span>
+      <span class="competency-tag">Cross-functional Stakeholder Management</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Logistics Integrators Pvt. Ltd.</span>
+        <span class="job-period">Mar 2025 – Mar 2026 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <ul>
+        <li><strong>End-to-end pipeline ownership:</strong> Built and owned data pipelines in SQL and Python (Pandas, NumPy) — from raw operational/sales ingestion through validation, transformation, and statistical anomaly detection — surfacing outliers before they impacted SLAs</li>
+        <li><strong>Pipeline automation:</strong> Automated recurring reporting workflows in Python, replacing manual processes with repeatable, scheduled pipeline runs and reducing turnaround on weekly business reviews</li>
+        <li><strong>Data quality &amp; integrity:</strong> Drove validation, reconciliation, and ETL audit across the pipeline — eliminating discrepancies across reporting systems and establishing a single source of truth</li>
+        <li><strong>Delivery layer:</strong> Owned weekly Power BI dashboards tracking 10+ KPIs across freight operations — the output layer of a pipeline that started with raw data, not a standalone static report</li>
+        <li><strong>Cross-functional RCA:</strong> Led root-cause analysis on performance spikes (delays, cost overruns), partnering with 3–5 teams to validate upstream data and ship corrective actions</li>
+        <li><strong>Funnel/pipeline analysis:</strong> Designed conversion, funnel, and drop-off analysis on shipment journeys end-to-end, informing operational redesigns</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Vrun Minerals Pvt. Ltd.</span>
+        <span class="job-period">Feb 2024 – Jul 2024 · Dehradun, India</span>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <ul>
+        <li>Cleaned and validated distributor and sales data pipelines using Excel and Python (Pandas); built downstream dashboards with deviation highlighting on inventory and sales trends</li>
+        <li>Performed inventory reconciliation and data-accuracy checks across daily operational data flows; documented pipeline and measurement requirements for non-technical stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Selected Projects — Pipeline &amp; Engineering Emphasis</div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Python Automation Pipeline — MIS Reporting</span>
+        <span class="project-badge">ETL · Pipeline Automation</span>
+      </div>
+      <div class="project-tech">Python · Pandas · openpyxl · logging</div>
+      <div class="project-desc">Built a complete end-to-end automated pipeline — ingest → clean → validate → analyse → report — on 1,000 retail records, generating a 5-sheet formatted Excel report with audit logging on a single command; 100% data-quality score. <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project7_python_automation">[GitHub]</a></div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">SQL Retail Analysis — 805K-Row Transformation Pipeline</span>
+        <span class="project-badge">SQL · ELT · Advanced Queries</span>
+      </div>
+      <div class="project-tech">SQL · SQLite · Python</div>
+      <div class="project-desc">Designed and ran a transformation pipeline loading 805,549 cleaned rows from 525,461 raw transactions into SQLite; wrote 15 advanced queries — CTEs, window functions, RFM segmentation, cohort retention, MoM growth via LAG() — across 5,878 customers in 41 countries. <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project5_sql_retail_analysis">[GitHub]</a></div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Fraud &amp; Anomaly Detection System</span>
+        <span class="project-badge">Statistical Scoring Pipeline</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · SciPy · Scikit-learn</div>
+      <div class="project-desc">Built a statistical scoring pipeline (Z-score, IQR, rule-based risk scoring 0–100) processing 283,726 real European credit-card transactions; flagged 2,838 suspicious records at a 0.17% fraud rate. <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project1_fraud_detection">[GitHub]</a></div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">Financial Data Integrity Checker</span>
+        <span class="project-badge">Data Validation Pipeline</span>
+      </div>
+      <div class="project-tech">Python · Pandas · NumPy · Matplotlib</div>
+      <div class="project-desc">Engineered a 10-rule validation pipeline on 700 real financial records; completeness scored 91–100% per column, 14 outliers flagged via 3-sigma detection. <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">[GitHub]</a></div>
+    </div>
+
+    <div class="project avoid-break">
+      <div class="project-header">
+        <span class="project-title">career-ops — Personal Job-Search Operating System</span>
+        <span class="project-badge">Self-built Automation Pipeline</span>
+      </div>
+      <div class="project-tech">Node.js · YAML · Playwright · Notion API · Gmail API</div>
+      <div class="project-desc">Designed and built a YAML-config-driven automation pipeline: JD scoring engine, ATS-CV generation (HTML→PDF), and bidirectional tracker sync to Notion — 33 entries auto-synced in a single batch, demonstrating self-directed, end-to-end systems ownership. <a href="https://github.com/Zolow-kuni">[GitHub]</a></div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div><span class="edu-title">MBA / PGPM — Operations Management</span><br><span class="edu-org">ICFAI Business School, Mumbai</span></div>
+        <span class="edu-year">2025 · CGPA 6.83</span>
+      </div>
+      <div class="edu-desc">Focus: data-driven decision making, process optimization, performance analytics.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div><span class="edu-title">Bachelor of Computer Applications (BCA)</span><br><span class="edu-org">Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <span class="edu-year">2022 · 72.68%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-title">🏆 Google Advanced Data Analytics Professional Certificate (7/7 courses)</span><span class="cert-org">Google / Coursera</span><span class="cert-year">May 2026</span></div>
+    <div class="cert-item"><span class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</span><span class="cert-org">Udemy</span><span class="cert-year">May 2026</span></div>
+    <div class="cert-item"><span class="cert-title">2025 Mastering dbt (Data Build Tool) — From Beginner to Pro (8 hrs)</span><span class="cert-org">Udemy</span><span class="cert-year">May 2026</span></div>
+    <div class="cert-item"><span class="cert-title">Python for Data Science · Data Analysis Using Python</span><span class="cert-org">IBM / Credly</span><span class="cert-year">2026</span></div>
+    <div class="cert-item"><span class="cert-title">Power BI Essential Training</span><span class="cert-org">LinkedIn Learning</span><span class="cert-year">Mar 2026</span></div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-block"><span class="skill-category">Pipelines &amp; Engineering: </span><span class="skill-list">SQL (joins, window functions, CTEs), PostgreSQL, SQLite, dbt (dbt Core), ELT/ETL Pipelines, Data Transformation, ETL Validation, Data Quality &amp; Integrity, Process Automation, Python (Pandas, NumPy, openpyxl)</span></div>
+    <div class="skills-block"><span class="skill-category">Analysis &amp; Modeling: </span><span class="skill-list">Statistical Analysis, Outlier/Anomaly Detection, Cohort Analysis, RFM Segmentation, Funnel Analytics, R (tidyverse, randomForest, caret), Logistic Regression, ROC/AUC Analysis</span></div>
+    <div class="skills-block"><span class="skill-category">BI &amp; Delivery Layer: </span><span class="skill-list">Power BI, Tableau, Streamlit, Plotly, MS Excel, Self-serve Analytics, Executive Dashboards</span></div>
+    <div class="skills-block"><span class="skill-category">Operations &amp; Collaboration: </span><span class="skill-list">KPI Ownership, RCA / Incident Investigation, Stakeholder Management, Cross-functional Data Validation, Agile</span></div>
+  </div>
+
+</div>
+</body>
+</html>
