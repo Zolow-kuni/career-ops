@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .proj { margin-bottom: 10px; }
+  .proj-title { font-size: 11px; font-weight: 600; color: #333; }
+  .proj-stack { font-size: 10px; color: hsl(270, 70%, 45%); font-weight: 500; }
+  .proj-desc { font-size: 10.5px; line-height: 1.6; color: #333; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; min-width: 0; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .proj, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="separator">|</span>
+      <span>Dehradun, India &middot; Open to relocate (India)</span>
+      <span class="separator">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-text">Business Analyst with ~1.5 years of experience in <strong>data reporting, dashboard development, and workflow automation</strong> &mdash; skilled in Google Sheets / Excel (formulas, pivot tables, data validation, conditional formatting), Python automation pipelines (openpyxl / Pandas), and AI productivity tools (Claude, ChatGPT, Gemini). At Logistics Integrators, I built automated multi-sheet reporting workflows from raw data end-to-end, owned cross-functional KPI dashboards for 10+ business metrics, and delivered weekly business reviews to senior stakeholders. Backed by an <strong>MBA in Operations Management (ICFAI Business School, Mumbai)</strong> for structured business analysis and stakeholder communication, and a <strong>BCA in Computer Applications</strong> for technical execution. <strong>Google Advanced Data Analytics Certified</strong> (full 7-of-7 Professional Certificate, May 2026).</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">CORE COMPETENCIES</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Google Sheets &amp; Excel (Formulas, Pivots, Dashboards, Validation)</span>
+      <span class="competency-tag">Workflow Automation (Python &middot; App Scripts equivalent)</span>
+      <span class="competency-tag">Business &amp; Financial Data Reporting</span>
+      <span class="competency-tag">KPI Tracking &amp; Dashboard Development</span>
+      <span class="competency-tag">AI Tools for Productivity (Claude, ChatGPT, Gemini)</span>
+      <span class="competency-tag">Market Research &amp; Competitor Analysis</span>
+      <span class="competency-tag">Stakeholder Presentations &amp; Business Decks</span>
+      <span class="competency-tag">Cross-functional Collaboration &amp; Communication</span>
+      <span class="competency-tag">Root-Cause Analysis &amp; Trend Detection</span>
+      <span class="competency-tag">SQL-based Data Analysis</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">EXPERIENCE</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Logistics Integrators Pvt. Ltd.</div>
+        <div class="job-period">Mar 2025 &ndash; Mar 2026</div>
+      </div>
+      <div class="job-role">Business Analyst (Management Trainee Program)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Built <strong>end-to-end automated reporting pipelines</strong> (Python · Pandas · openpyxl) that ingested, cleaned, validated, and generated structured multi-sheet Excel reports from raw data &mdash; single-command execution, 100% data quality; eliminated hours of manual weekly reporting effort</li>
+        <li>Owned <strong>weekly KPI dashboards in Power BI</strong> tracking 10+ business metrics across freight operations; served as single source of truth for cross-functional reporting and stakeholder decision-making</li>
+        <li>Produced <strong>structured stakeholder presentations and business review reports</strong> for senior leadership &mdash; translated complex operational data into clear, actionable insights for non-technical audiences</li>
+        <li>Led <strong>root-cause analysis (RCA)</strong> on performance spikes (shipment delays, cost overruns, turnaround drops) &mdash; validated findings with data, coordinated across 3&ndash;5 teams, and delivered corrective action plans</li>
+        <li>Maintained <strong>data integrity and reporting accuracy</strong> across validation, reconciliation, and ETL audit workflows; eliminated discrepancies across reporting systems</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Vrun Minerals Pvt. Ltd.</div>
+        <div class="job-period">Feb 2024 &ndash; Jul 2024</div>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Conducted <strong>business trend analysis</strong> on supply-chain and sales data &mdash; built dashboards with deviation highlighting on inventory and revenue trends to inform operations decisions</li>
+        <li>Documented data workflows and metric definitions for non-technical stakeholders; improved reporting clarity and cross-team alignment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PROJECTS &amp; AUTOMATION</div>
+
+    <div class="proj">
+      <div class="proj-title">Python Automation Pipeline &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project7_python_automation">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; openpyxl &middot; logging</div>
+      <div class="proj-desc">End-to-end automated reporting pipeline &mdash; single-command execution: ingest, clean, validate, analyse, and generate a <strong>5-sheet formatted Excel report</strong> with timestamps and data quality scoring; 100% data quality score. Direct equivalent of a Google App Scripts workflow automation &mdash; demonstrates structured automation mindset and attention to output format</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Interactive KPI Dashboard &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project2_kpi_dashboard">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Streamlit &middot; Plotly &middot; Pandas</div>
+      <div class="proj-desc">Live multi-department dashboard tracking <strong>6 KPIs across 180,519 real supply-chain orders</strong> with automated alerting and performance trend monitoring &mdash; stakeholder-ready, built for non-technical exploration and management reporting</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Financial Data Integrity Checker &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; Matplotlib</div>
+      <div class="proj-desc">10-rule validation engine on <strong>700 real Microsoft financial records</strong>; 10/10 rules passed, 14 profit outliers flagged via 3-sigma detection, completeness scored 91&ndash;100% per column &mdash; financial data analysis and quality assurance</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Sales &amp; Inventory Trend Analyzer &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project4_sales_trend_analyzer">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; Matplotlib &middot; Seaborn</div>
+      <div class="proj-desc">Analysed <strong>9,994 real US retail transactions</strong> across 3 categories and 17 sub-categories; detected 27 seasonal anomalies, computed MoM growth and 3-month rolling averages, 12.04% overall profit margin &mdash; business trend identification and structured market analysis</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">career-ops &mdash; Job-Search Automation OS &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2">GitHub</a></div>
+      <div class="proj-stack">Node.js &middot; Claude API &middot; YAML &middot; Playwright &middot; Gmail API</div>
+      <div class="proj-desc">Built a YAML-config-driven job-search operating system using <strong>AI tools (Claude, Gmail API, Playwright)</strong> for automated CV generation, pipeline tracking, and stakeholder outreach &mdash; demonstrates practical AI tools fluency and end-to-end automation ownership</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">EDUCATION</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">MBA / PGPM &mdash; Operations Management <span class="edu-org">&middot; ICFAI Business School, Mumbai</span></div>
+        <div class="edu-year">2025 &middot; CGPA 6.83</div>
+      </div>
+      <div class="edu-desc">Focus: business performance analytics, stakeholder communication, structured decision-making, and data-driven business strategy.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Computer Applications (BCA) <span class="edu-org">&middot; Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <div class="edu-year">2022 &middot; 72.68%</div>
+      </div>
+      <div class="edu-desc">Foundation in programming, databases, and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="cert-item">
+      <div class="cert-title">Google Advanced Data Analytics Professional Certificate (7-course program)</div>
+      <div class="cert-org">Google / Coursera</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Python for Data Science &middot; Data Analysis Using Python</div>
+      <div class="cert-org">IBM / Credly</div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Google Workspace &amp; Reporting:</span> Google Sheets (formulas, pivot tables, VLOOKUP/ARRAYFORMULA, data validation, conditional formatting, dashboards), MS Excel (Pivot Tables, Modeling), Google Docs, PowerPoint / business decks</div>
+      <div class="skill-item"><span class="skill-category">Automation &amp; AI Tools:</span> Python (Pandas, NumPy, openpyxl) &mdash; App Scripts equivalent; Claude AI, ChatGPT, Gemini for research and productivity; Node.js automation workflows</div>
+      <div class="skill-item"><span class="skill-category">Analytics &amp; BI:</span> SQL (joins, window functions, CTEs), Power BI (DAX, multi-page dashboards), Tableau, Streamlit, Statistical Analysis, Cohort Analysis, RFM Segmentation, Trend Analysis, KPI Tracking</div>
+      <div class="skill-item"><span class="skill-category">Business Analysis:</span> Market Research, Competitor Analysis, Business Deck Design, Stakeholder Communication, Cross-functional Reporting, RCA, Process Documentation, CRM (familiar)</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

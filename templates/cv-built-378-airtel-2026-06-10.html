@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .proj { margin-bottom: 10px; }
+  .proj-title { font-size: 11px; font-weight: 600; color: #333; }
+  .proj-stack { font-size: 10px; color: hsl(270, 70%, 45%); font-weight: 500; }
+  .proj-desc { font-size: 10.5px; line-height: 1.6; color: #333; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; min-width: 0; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .proj, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="separator">|</span>
+      <span>Dehradun, India &middot; Open to relocate (India)</span>
+      <span class="separator">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-text">Data Analyst with ~1.5 years of hands-on experience <strong>extracting, validating, and transforming large datasets using SQL and building Power BI dashboards</strong> that business stakeholders actually use. At Logistics Integrators, I wrote SQL-based anomaly detection and threshold-based alerting on operational datasets and owned the Power BI reporting infrastructure tracking 10+ KPIs &mdash; becoming the single source of truth for cross-team decision-making. I've applied the same SQL fundamentals (joins, window functions, CTEs, aggregations) across PostgreSQL and SQLite; Oracle's dialect is an immediate ramp given identical query logic. Portfolio includes a <strong>15-query advanced SQL analysis on 805,549 rows</strong> (RFM, cohort retention, MoM growth), a <strong>3-page Power BI churn dashboard with DAX measures</strong>, and a fraud detection system on 283,726 real financial transactions. <strong>Google Advanced Data Analytics Certified</strong> (7-of-7 courses, May 2026); 15 certifications total.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">CORE COMPETENCIES</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">SQL (Joins, Window Fns, CTEs, Aggregations)</span>
+      <span class="competency-tag">Power BI (DAX, Data Modeling, Dashboards)</span>
+      <span class="competency-tag">Data Extraction &amp; Validation</span>
+      <span class="competency-tag">Large Dataset Query Optimization</span>
+      <span class="competency-tag">Trend &amp; Variance Analysis</span>
+      <span class="competency-tag">Business Performance Reporting</span>
+      <span class="competency-tag">KPI Tracking &amp; Metrics Ownership</span>
+      <span class="competency-tag">Root-Cause Investigation</span>
+      <span class="competency-tag">Python (Pandas, NumPy, Automation)</span>
+      <span class="competency-tag">Stakeholder-Ready Dashboards</span>
+      <span class="competency-tag">Data Integrity &amp; Reconciliation</span>
+      <span class="competency-tag">Statistical Anomaly Detection</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">EXPERIENCE</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Logistics Integrators Pvt. Ltd.</div>
+        <div class="job-period">Mar 2025 &ndash; Mar 2026</div>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Wrote <strong>SQL-based anomaly detection and threshold-based alerting</strong> on operational and sales datasets — extracted, joined, and aggregated large datasets to surface outliers before they impacted SLAs</li>
+        <li>Owned weekly <strong>Power BI dashboards</strong> tracking 10+ business KPIs across freight operations; established the single source of truth for cross-team reporting with clean DAX-driven measures</li>
+        <li>Led <strong>trend analysis, variance investigations, and root-cause analysis</strong> on performance spikes — shipment delays, turnaround drops, cost overruns — partnering with 3&ndash;5 cross-functional teams to convert findings into corrective actions</li>
+        <li><strong>Drove data validation and integrity workflows:</strong> ETL audit, reconciliation, and cross-system data quality checks — eliminating reporting discrepancies across systems</li>
+        <li>Automated recurring reporting in <strong>Python (Pandas, NumPy)</strong>, reducing manual effort on weekly business reviews</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Vrun Minerals Pvt. Ltd.</div>
+        <div class="job-period">Feb 2024 &ndash; Jul 2024</div>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Built dashboards with deviation flagging on inventory and sales trends in <strong>Excel and Python (Pandas)</strong>; supported supply-chain decisions with trend and variance analysis</li>
+        <li>Performed daily <strong>data extraction, validation, and reconciliation</strong> across operational datasets, reducing reporting errors and improving stock visibility</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PROJECTS</div>
+
+    <div class="proj">
+      <div class="proj-title">Power BI Customer Churn Dashboard &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project6_powerbi_churn">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Power BI &middot; DAX</div>
+      <div class="proj-desc">Cleaned 10,000 bank customer records to zero nulls; built a <strong>3-page Power BI dashboard with DAX measures</strong> tracking 20.4% churn rate across demographics, credit-score bands, and balance segments &mdash; designed for self-serve business stakeholder exploration. Direct analog to financial data dashboarding for Airtel Payments Bank</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">SQL Retail Analysis &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project5_sql_retail_analysis">GitHub</a></div>
+      <div class="proj-stack">SQL &middot; SQLite &middot; Python</div>
+      <div class="proj-desc">Loaded and queried <strong>805,549 rows</strong> from 525,461 raw e-commerce transactions; wrote <strong>15 advanced SQL queries</strong> &mdash; window functions, CTEs, RFM segmentation, cohort retention, MoM revenue growth via LAG() &mdash; across 5,878 customers in 41 countries. Demonstrates the exact extract-join-aggregate-transform workflow in the JD</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Fraud &amp; Anomaly Detection System &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project1_fraud_detection">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; SciPy &middot; Scikit-learn</div>
+      <div class="proj-desc">Applied Z-score, IQR, and rule-based risk scoring to <strong>283,726 real European credit card transactions</strong>; flagged 2,838 suspicious records. Financial domain analytical skills applied at scale &mdash; relevant for a payments bank analytics context</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Interactive KPI Dashboard &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project2_kpi_dashboard">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Streamlit &middot; Plotly &middot; Pandas</div>
+      <div class="proj-desc">Live multi-department dashboard tracking <strong>6 KPIs</strong> across 180,519 real supply-chain orders; automated alerting surfaced a 40.9% on-time delivery rate for management reporting</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">EDUCATION</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">MBA / PGPM &mdash; Operations Management <span class="edu-org">&middot; ICFAI Business School, Mumbai</span></div>
+        <div class="edu-year">2025 &middot; CGPA 6.83</div>
+      </div>
+      <div class="edu-desc">Focus: data-driven decision making, performance analytics, and business insights delivery to non-technical stakeholders.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Computer Applications (BCA) <span class="edu-org">&middot; Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <div class="edu-year">2022 &middot; 72.68%</div>
+      </div>
+      <div class="edu-desc">Foundation in programming (Java, Python), relational databases (SQL), and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="cert-item">
+      <div class="cert-title">Google Advanced Data Analytics Professional Certificate (7-course program)</div>
+      <div class="cert-org">Google / Coursera</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Power BI Essential Training</div>
+      <div class="cert-org">LinkedIn Learning</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Python for Data Science &middot; Data Analysis Using Python</div>
+      <div class="cert-org">IBM / Credly</div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">SQL &amp; Databases:</span> SQL (joins, window functions, CTEs, aggregations, subqueries), PostgreSQL, SQLite, Oracle SQL (fundamentals; adapting from PostgreSQL), Query Optimization, Large Dataset Analysis</div>
+      <div class="skill-item"><span class="skill-category">BI &amp; Visualization:</span> Power BI (DAX, Data Modeling, Calculated Measures), Tableau, Streamlit, MS Excel (Pivot Tables), Self-serve Dashboard Design, Executive Reporting</div>
+      <div class="skill-item"><span class="skill-category">Python &amp; Analytics:</span> Python (Pandas, NumPy), Statistical Analysis, Outlier Detection (Z-score, IQR), Cohort Analysis, RFM Segmentation, Funnel Analytics, A/B Testing Principles</div>
+      <div class="skill-item"><span class="skill-category">Data Operations:</span> Data Validation, Data Integrity, ETL Audit, Reconciliation, Data Quality, Process Automation, KPI Tracking</div>
+      <div class="skill-item"><span class="skill-category">Collaboration:</span> Stakeholder Management, Data Storytelling, Non-technical Communication, Cross-functional Coordination, Agile</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

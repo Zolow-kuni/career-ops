@@ -18,8 +18,6 @@
 12. Generate full HTML from template + personalized content
 13. Read `name` from `config/profile.yml` → normalize to kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
 14. Write HTML to `/tmp/cv-{candidate}-{company}.html`
-   - **⚠️ Windows path gotcha:** On Windows setups, the agent's `/tmp/...` (via the Write tool) and the shell's `/tmp/...` (via Bash, e.g. MSYS/Git-Bash) can resolve to *different* underlying directories, while `generate-pdf.mjs` (a Node/Playwright process spawned from the shell) resolves `/tmp/...` to the Windows temp dir (typically `C:\Users\{user}\AppData\Local\Temp`). If the Write tool's `/tmp` doesn't map to that same folder, the script fails with `ENOENT: no such file or directory, open 'C:\Users\{user}\AppData\Local\Temp\cv-....html'` even though the Read tool can "see" the file at `/tmp/...`.
-   - **Fix:** write the HTML directly to the absolute Windows temp path, e.g. `C:\Users\{user}\AppData\Local\Temp\cv-{candidate}-{company}.html` (use the Write tool with that exact path — find `{user}` from any existing path in the repo, e.g. `config/profile.yml` or prior report paths). Then pass that same `/tmp/cv-...html` (shell-relative) or the absolute Windows path to `generate-pdf.mjs` — whichever the shell resolves to the file you just wrote. Verify with a quick `ls` in the shell before invoking the generator to avoid a wasted run.
 15. Execute: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
 16. Report: PDF path, number of pages, keyword coverage %
 
@@ -175,6 +173,30 @@ d. Report: PDF path, file size, Canva design URL (for manual tweaking)
 - If text elements can't be mapped → warn user, show what was found, ask for manual mapping
 - If `find_and_replace_text` finds no matches → try broader substring matching
 - Always provide the Canva design URL so the user can edit manually if auto-edit fails
+
+## Cover Letter Sub-flow
+
+After generating the CV PDF, offer to generate a cover letter:
+
+```text
+CV PDF generated: output/{path}
+
+Want a cover letter for this role too?
+- Say "yes" or "cover letter" to generate one now
+- Or run `/career-ops cover {slug}` later
+```
+
+If the user says yes, run the full cover letter flow from `modes/cover.md` in slug mode:
+1. Load the existing `## Cover Letter Draft` from the evaluation report as a starting point
+2. Run company research (Step 3 of cover.md)
+3. Present keyword list for confirmation (Step 4)
+4. Surface any gaps (Step 5)
+5. Ask the four prompts: why / problems / approach / tone (Step 6)
+6. Draft in chat, wait for approval (Steps 7-8)
+7. Generate cover letter PDF via `node generate-cover-letter.mjs` (Step 9)
+8. Report both PDF paths
+
+Do not auto-generate the cover letter PDF without going through the interactive steps above.
 
 ## Post-generation
 

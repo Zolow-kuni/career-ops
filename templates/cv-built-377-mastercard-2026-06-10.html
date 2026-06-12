@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .proj { margin-bottom: 10px; }
+  .proj-title { font-size: 11px; font-weight: 600; color: #333; }
+  .proj-stack { font-size: 10px; color: hsl(270, 70%, 45%); font-weight: 500; }
+  .proj-desc { font-size: 10.5px; line-height: 1.6; color: #333; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; min-width: 0; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .proj, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="separator">|</span>
+      <span>Dehradun, India &middot; Open to relocate (India)</span>
+      <span class="separator">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-text">Reporting &amp; Data Validation Analyst with ~1.5 years of hands-on experience owning <strong>data integrity, reconciliation, and operational reporting cadence</strong> end-to-end. At Logistics Integrators, maintained the single source of truth for 10+ business KPIs, ran ETL audit and cross-system reconciliation workflows, and led root-cause investigations under tight weekly deadlines. Built a portfolio-grade <strong>Financial Data Integrity Checker</strong> (10-rule validation engine, 3-sigma outlier detection on real financial records) and a <strong>Fraud &amp; Anomaly Detection System</strong> on 283,726 real European credit card transactions — demonstrating applied financial data quality in practice. Backed by an <strong>MBA in Operations Management</strong> (process improvement, change management, performance analytics) and a Google Advanced Data Analytics Professional Certificate. Precise, self-directed, and fast to learn new reporting systems under deadline pressure.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">CORE COMPETENCIES</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Data Validation &amp; Integrity</span>
+      <span class="competency-tag">Operational Reporting Cadence</span>
+      <span class="competency-tag">Reconciliation &amp; Audit Workflows</span>
+      <span class="competency-tag">Anomaly &amp; Outlier Detection</span>
+      <span class="competency-tag">KPI Tracking &amp; Metrics Ownership</span>
+      <span class="competency-tag">Root-Cause Investigation</span>
+      <span class="competency-tag">Process Improvement &amp; Documentation</span>
+      <span class="competency-tag">Excel &amp; Power BI Dashboards</span>
+      <span class="competency-tag">SQL (Window Fns, CTEs, Aggregations)</span>
+      <span class="competency-tag">Python Automation (Pandas, NumPy)</span>
+      <span class="competency-tag">Cross-functional Stakeholder Management</span>
+      <span class="competency-tag">Tight-Timeline Analytical Delivery</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">EXPERIENCE</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Logistics Integrators Pvt. Ltd.</div>
+        <div class="job-period">Mar 2025 &ndash; Mar 2026</div>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li><strong>Owned data integrity and validation end-to-end:</strong> ETL audit, cross-system reconciliation, and data quality workflows — eliminating reporting discrepancies and establishing the single source of truth for cross-team operational reporting</li>
+        <li>Maintained and published weekly BI dashboards in Power BI tracking <strong>10+ business KPIs</strong> across freight operations; managed tight reporting cadences with zero missed deadlines</li>
+        <li><strong>Led root-cause analysis (RCA)</strong> on performance spikes — shipment delays, turnaround drops, cost overruns — partnering with 3&ndash;5 cross-functional teams to validate data, resolve open issues, and ship corrective actions</li>
+        <li>Built SQL-based <strong>statistical anomaly detection and threshold-based alerting</strong> on operational datasets, surfacing outliers before they impacted SLAs or reporting accuracy</li>
+        <li>Automated recurring reporting workflows in <strong>Python (Pandas, NumPy)</strong>, reducing manual effort and improving turnaround on weekly business reviews</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Vrun Minerals Pvt. Ltd.</div>
+        <div class="job-period">Feb 2024 &ndash; Jul 2024</div>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Performed <strong>inventory reconciliation and daily data-accuracy checks</strong> across operational datasets, reducing reporting errors and improving stock visibility</li>
+        <li>Built dashboards with deviation highlighting on inventory and sales trends in Excel and Python (Pandas); delivered actionable insights for supply-chain decisions</li>
+        <li>Documented data workflows and measurement requirements in plain language, improving transparency of metric definitions for non-technical stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PROJECTS</div>
+
+    <div class="proj">
+      <div class="proj-title">Financial Data Integrity Checker &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project3_financial_integrity">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; Matplotlib</div>
+      <div class="proj-desc">Engineered a <strong>10-rule validation engine on 700 real Microsoft financial records</strong>; 10/10 rules passed, 14 profit outliers flagged via 3-sigma detection, completeness scored 91&ndash;100% per column. Direct analog to QMR-style data quality controls on customer-submitted financial data</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Interactive KPI Dashboard &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project2_kpi_dashboard">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Streamlit &middot; Plotly &middot; Pandas</div>
+      <div class="proj-desc">Built a live multi-department dashboard tracking <strong>6 KPIs</strong> (on-time delivery, revenue, profit margin, delay days) across 180,519 real supply-chain orders; automated alerting surfaced a 40.9% on-time delivery rate for management reporting</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Fraud &amp; Anomaly Detection System &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project1_fraud_detection">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; SciPy &middot; Scikit-learn</div>
+      <div class="proj-desc">Applied Z-score, IQR, and rule-based risk scoring (0&ndash;100) to <strong>283,726 real European credit card transactions</strong>; flagged 2,838 suspicious records at 0.17% fraud rate. Financial domain data quality applied at scale</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Python Automation Pipeline &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project7_python_automation">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; openpyxl &middot; logging</div>
+      <div class="proj-desc">End-to-end automated pipeline on 1,000 retail records &mdash; ingest, clean, validate, analyse, and generate a <strong>5-sheet formatted Excel report</strong> with timestamps; 100% data quality score, single-command execution. Demonstrates Excel-output automation for operational reporting</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">EDUCATION</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">MBA / PGPM &mdash; Operations Management <span class="edu-org">&middot; ICFAI Business School, Mumbai</span></div>
+        <div class="edu-year">2025 &middot; CGPA 6.83</div>
+      </div>
+      <div class="edu-desc">Focus: operational performance management, process improvement, change management, and data-driven decision making. Directly applicable to QMR process and metrics ownership.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Computer Applications (BCA) <span class="edu-org">&middot; Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <div class="edu-year">2022 &middot; 72.68%</div>
+      </div>
+      <div class="edu-desc">Foundation in programming (Java, Python), relational databases (SQL), and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="cert-item">
+      <div class="cert-title">Google Advanced Data Analytics Professional Certificate (7-course program)</div>
+      <div class="cert-org">Google / Coursera</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">2025 Mastering dbt (Data Build Tool) &mdash; From Beginner to Pro (8 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Python for Data Science &middot; Data Analysis Using Python</div>
+      <div class="cert-org">IBM / Credly</div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Data Validation &amp; Integrity:</span> ETL Audit, Reconciliation, Data Quality, Outlier Detection (Z-score, IQR, 3-sigma), Rule-based Validation, Completeness Checks</div>
+      <div class="skill-item"><span class="skill-category">Reporting &amp; Analytics:</span> Excel (Pivot Tables, Modeling), Power BI (DAX), Tableau, Operational KPI Reporting, Self-serve Dashboards, Executive Reporting</div>
+      <div class="skill-item"><span class="skill-category">SQL &amp; Python:</span> SQL (joins, window functions, CTEs, aggregations), PostgreSQL, Python (Pandas, NumPy), Statistical Analysis, Cohort Analysis</div>
+      <div class="skill-item"><span class="skill-category">Operations &amp; Process:</span> Process Improvement, Change Management, RCA / Incident Investigation, SLA Tracking, Threshold-based Alerting, Documentation</div>
+      <div class="skill-item"><span class="skill-category">Collaboration:</span> Cross-functional Stakeholder Management, Data Storytelling, Non-technical Communication, Agile</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

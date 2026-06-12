@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Joshi — CV</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .proj { margin-bottom: 10px; }
+  .proj-title { font-size: 11px; font-weight: 600; color: #333; }
+  .proj-stack { font-size: 10px; color: hsl(270, 70%, 45%); font-weight: 500; }
+  .proj-desc { font-size: 10.5px; line-height: 1.6; color: #333; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, max-content) 44px; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; min-width: 0; }
+  .cert-org { color: hsl(270, 70%, 45%); white-space: nowrap; }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; text-align: right; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .proj, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Subham Joshi</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>joshisubham442@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/subham-joshi-b25778280">linkedin.com/in/subham-joshi-b25778280</a>
+      <span class="separator">|</span>
+      <span>Dehradun, India &middot; Open to relocate (India)</span>
+      <span class="separator">|</span>
+      <a href="https://github.com/Zolow-kuni/data-portfolio">github.com/Zolow-kuni/data-portfolio</a>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-text">Data Analyst and aspiring Data Scientist with ~1.5 years of experience in <strong>e-commerce analytics, ML model development, customer segmentation, and anomaly detection</strong>. Analyzed 805,549 real e-commerce transactions &mdash; RFM segmentation, cohort retention, MoM revenue growth via SQL &mdash; and trained predictive models across churn (AUC 0.837), fraud detection (283K credit card transactions), and customer analytics. At Logistics Integrators, I built <strong>statistical anomaly detection</strong> on operational datasets, owned funnel and drop-off analysis on transactional journeys, and delivered KPI dashboards for cross-functional stakeholders. Backed by the full <strong>Google Advanced Data Analytics Professional Certificate</strong> (7-of-7, May 2026) covering statistics, hypothesis testing, regression, ML, and experiment design; and an <strong>MBA in Operations Management (ICFAI Business School, Mumbai)</strong>.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">CORE COMPETENCIES</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Customer Segmentation &amp; RFM Analysis</span>
+      <span class="competency-tag">ML Model Development (Churn / Fraud / Classification)</span>
+      <span class="competency-tag">Anomaly &amp; Fraud Detection</span>
+      <span class="competency-tag">A/B Testing &amp; Hypothesis Testing</span>
+      <span class="competency-tag">SQL (Window Functions, CTEs, Cohort Analysis)</span>
+      <span class="competency-tag">Python (Scikit-learn, Pandas, NumPy)</span>
+      <span class="competency-tag">R (randomForest, caret, pROC, tidyverse)</span>
+      <span class="competency-tag">E-commerce Analytics &amp; Funnel Analysis</span>
+      <span class="competency-tag">Data Visualization (Power BI, Tableau, Matplotlib, Seaborn)</span>
+      <span class="competency-tag">Statistical Modelling &amp; Cohort Retention Analysis</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">EXPERIENCE</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Logistics Integrators Pvt. Ltd.</div>
+        <div class="job-period">Mar 2025 &ndash; Mar 2026</div>
+      </div>
+      <div class="job-role">Data Analyst (Management Trainee Program)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Built <strong>SQL-based statistical anomaly detection and threshold-based alerting</strong> on operational and sales datasets, surfacing outliers and performance deviations before they impacted SLAs</li>
+        <li>Designed <strong>conversion, funnel, and drop-off analysis</strong> on end-to-end transactional journeys &mdash; identified stage-level churn points, informed operational interventions and process redesigns</li>
+        <li>Led <strong>hypothesis-driven root-cause analysis (RCA)</strong> on performance spikes (shipment delays, cost overruns, turnaround drops) &mdash; validated findings with data and partnered with 3&ndash;5 cross-functional teams to ship corrective actions</li>
+        <li>Owned <strong>weekly KPI dashboards in Power BI</strong> tracking 10+ business metrics; established the single source of truth for cross-team performance reporting</li>
+        <li>Automated recurring reporting workflows in <strong>Python (Pandas, NumPy)</strong>, reducing manual effort and improving turnaround on weekly business reviews</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Vrun Minerals Pvt. Ltd.</div>
+        <div class="job-period">Feb 2024 &ndash; Jul 2024</div>
+      </div>
+      <div class="job-role">Operations Analyst (Intern)</div>
+      <div class="job-location">Dehradun, India</div>
+      <ul>
+        <li>Cleaned and validated distributor and sales datasets; built dashboards with deviation highlighting on inventory and revenue trends</li>
+        <li>Conducted business trend analysis to generate actionable supply-chain insights; documented data workflows for non-technical stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PROJECTS &amp; ML PORTFOLIO</div>
+
+    <div class="proj">
+      <div class="proj-title">SQL Retail Analysis — E-commerce Segmentation &amp; Cohort Analytics &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project5_sql_retail_analysis">GitHub</a></div>
+      <div class="proj-stack">SQL &middot; SQLite &middot; Python</div>
+      <div class="proj-desc">Cleaned and loaded <strong>805,549 rows from Online Retail II</strong> into SQLite; wrote 15 advanced queries covering RFM segmentation (5,878 customers, 41 countries), cohort retention analysis, MoM revenue growth via LAG(), and window-function-based user behaviour scoring &mdash; directly mirrors e-commerce DS use cases (segmentation, LTV, retention)</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Customer Churn Prediction in R &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project8_churn_prediction_r">GitHub</a></div>
+      <div class="proj-stack">R &middot; randomForest &middot; caret &middot; pROC &middot; tidyverse</div>
+      <div class="proj-desc">Trained and compared 3 ML models on 7,043 Telco customer records; <strong>Logistic Regression AUC 0.837</strong>, Random Forest 0.824, Decision Tree 0.781 &mdash; outputs include 8 EDA plots, ROC curve comparison, and feature importance chart. Model evaluation methodology applicable to e-commerce churn and re-engagement targeting</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Fraud &amp; Anomaly Detection System &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/project1_fraud_detection">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; SciPy &middot; Scikit-learn</div>
+      <div class="proj-desc">Applied <strong>Z-score, IQR, and rule-based risk scoring (0&ndash;100)</strong> to 283,726 real European credit card transactions; flagged 2,838 suspicious records at a 0.17% fraud rate &mdash; multi-method anomaly detection pipeline with structured severity tiers</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Automatidata EDA — NYC Yellow Taxi 2017 &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio/tree/main/google-data-analytics-certificate/course-2-automatidata">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Pandas &middot; NumPy &middot; Matplotlib &middot; Seaborn &middot; Tableau</div>
+      <div class="proj-desc">Full EDA on <strong>408,294 NYC TLC trips</strong>; engineered 5 features (duration, hour, quarter, zero-distance flag); IQR outlier detection; 4 Python visualisations + Tableau scatter plot; A/B test framing for fare-type comparison; documented using PACE framework with executive summary</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Power BI Customer Churn Dashboard &mdash; <a href="https://github.com/Zolow-kuni/data-portfolio-2/tree/main/project6_powerbi_churn">GitHub</a></div>
+      <div class="proj-stack">Python &middot; Power BI &middot; DAX</div>
+      <div class="proj-desc">Cleaned 10,000 bank customer records; built a 3-page Power BI dashboard with DAX measures tracking <strong>20.4% churn rate</strong> across demographics, credit score bands, and balance segments &mdash; stakeholder-ready churn visualisation and segmentation analysis</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">EDUCATION</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">MBA / PGPM &mdash; Operations Management <span class="edu-org">&middot; ICFAI Business School, Mumbai</span></div>
+        <div class="edu-year">2025 &middot; CGPA 6.83</div>
+      </div>
+      <div class="edu-desc">Focus: statistical methods, data-driven decision-making, customer analytics, and performance measurement frameworks.</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Computer Applications (BCA) <span class="edu-org">&middot; Shree Guru Ram Rai I.T.S., Dehradun</span></div>
+        <div class="edu-year">2022 &middot; 72.68%</div>
+      </div>
+      <div class="edu-desc">Foundation in programming, relational databases, and analytical problem solving.</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="cert-item">
+      <div class="cert-title">Google Advanced Data Analytics Professional Certificate (7-course: statistics, ML, regression, experiment design)</div>
+      <div class="cert-org">Google / Coursera</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">SQL and PostgreSQL: The Complete Developer's Guide (22 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Python for Data Science &middot; Data Analysis Using Python</div>
+      <div class="cert-org">IBM / Credly</div>
+      <div class="cert-year">2026</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">2025 Mastering dbt (Data Build Tool) — From Beginner to Pro (8 hrs)</div>
+      <div class="cert-org">Udemy</div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">ML &amp; Python:</span> Python (Scikit-learn, Pandas, NumPy, SciPy), R (randomForest, caret, pROC, ggplot2, tidyverse), Logistic Regression, Decision Trees, Random Forest, Z-score / IQR anomaly detection, ROC / AUC analysis, A/B Testing, Hypothesis Testing, Statistical Modelling</div>
+      <div class="skill-item"><span class="skill-category">SQL &amp; Analytics Engineering:</span> SQL (joins, window functions, CTEs, LAG, RFM segmentation, cohort retention), PostgreSQL, SQLite, dbt (dbt Core), ETL Validation, Data Quality, Data Integrity</div>
+      <div class="skill-item"><span class="skill-category">BI &amp; Visualization:</span> Power BI (DAX, multi-page dashboards), Tableau, Matplotlib, Seaborn, Streamlit, Plotly, MS Excel (Pivot Tables), Looker / Metabase (familiar)</div>
+      <div class="skill-item"><span class="skill-category">E-commerce &amp; Business Analytics:</span> RFM Segmentation, Cohort Retention Analysis, Funnel &amp; Drop-off Analysis, KPI Tracking, RCA, Customer Segmentation, MoM Growth Analysis, LTV concepts, Conversion Rate Analysis</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
